@@ -21,7 +21,9 @@ export function listen(id = "", handler = defaultHandler) {
   element.addEventListener("mouseup", handler);
   element.addEventListener("click", handler);
   element.addEventListener("contextmenu", handler);
-  element.addEventListener("focus", handler, true);
+  element.addEventListener("focus", handler, {
+    capture: true
+  });
 }
 
 /**
@@ -38,5 +40,7 @@ export function unlisten(id = "", handler = defaultHandler) {
   element.removeEventListener("mouseup", handler);
   element.removeEventListener("click", handler);
   element.removeEventListener("contextmenu", handler);
-  element.removeEventListener("focus", handler, true);
+  element.removeEventListener("focus", handler, {
+    capture: true
+  });
 }

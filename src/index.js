@@ -30,12 +30,23 @@ class App extends Component {
           `EVENT (${new Date().getTime()}): ${event.type}`
         ]
       },
-      () => {
-        const logElement = document.getElementById("log");
-        const logContainerElement = document.getElementById("log-container");
-        logContainerElement.scrollTop = logElement.scrollHeight;
-      }
+      this.adjustLogContainerScrollHeight
     );
+  };
+
+  clearEvents = () => {
+    this.setState(
+      {
+        events: []
+      },
+      this.adjustLogContainerScrollHeight
+    );
+  };
+
+  adjustLogContainerScrollHeight = () => {
+    const logElement = document.getElementById("log");
+    const logContainerElement = document.getElementById("log-container");
+    logContainerElement.scrollTop = logElement.scrollHeight;
   };
 
   listen = () => {
@@ -70,6 +81,9 @@ class App extends Component {
         >
           <p>Mouse or Touch here</p>
           <input placeholder="Focus here" />
+        </div>
+        <div className="clearer-container">
+          <button onClick={this.clearEvents}>Clear events</button>
         </div>
         <div id="log-container" className="log-container">
           <pre id="log" className="log">
