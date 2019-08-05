@@ -1,0 +1,39 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.interactor {
+  border: solid 1px black;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  height: 100px;
+  vertical-align: middle;
+}
+
+.interactor--active {
+  background-color: darkgreen;
+}
+
+.log-container {
+  text-align: left;
+  box-shadow: inset 0px 0px 5px black;
+  height: 200px;
+  overflow-y: auto;
+  margin: 1em auto;
+}
+
+.log {
+  margin: 0;
+  padding: 5px;
+}
+
+input {
+  font-size: inherit;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}

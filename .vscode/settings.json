@@ -1,0 +1,15 @@
+{
+  "editor": {
+    "fontFamily": "Menlo, Consolas, \"Source Code Pro\", monospace",
+    "fontLigatures": false,
+    "formatOnPaste": true,
+    "lineHeight": 15,
+    "folding": true,
+    "glyphMargin": false,
+    "fontSize": 12
+  },
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Atom One Dark",
+  "editor.fontSize": 11,
+  "editor.fontFamily": "Consolas, \"Source Code Pro\", monospace"
+}
