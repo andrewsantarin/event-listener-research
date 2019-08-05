@@ -3,16 +3,6 @@ export function getListenerElement(id = "") {
 }
 
 /**
- *
- * @param {(event: TouchEvent | MouseEvent) => void} callback
- */
-const withPreventDefault = callback => event => {
-  event.preventDefault();
-
-  return callback(event);
-};
-
-/**
  * @param {TouchEvent | MouseEvent} event
  */
 const defaultHandler = event => {};
@@ -24,7 +14,7 @@ const defaultHandler = event => {};
 export function listen(id = "", handler = defaultHandler) {
   const element = getListenerElement(id);
   element.addEventListener("touchstart", handler);
-  element.addEventListener("touchmove", withPreventDefault(handler));
+  element.addEventListener("touchmove", handler);
   element.addEventListener("touchend", handler);
   element.addEventListener("mousemove", handler);
   element.addEventListener("mousedown", handler);

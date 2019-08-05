@@ -23,7 +23,6 @@ class App extends Component {
   }
 
   appendEvent = event => {
-    event.preventDefault();
     this.setState(
       {
         events: [
